@@ -10,7 +10,7 @@ const userSchema = new mongoose.Schema({
   gender: { type: String, enum: ['male', 'female', 'other'], default: 'male' },
   phone: { type: String, unique: true, required: true },
   address: { type: String, required: true },
-  role: { type: String, enum: ['user', 'admin'], default: 'user' },
+  role: { type: String, enum: ['user', 'admin','owner'], default: 'user' },
   govt_id_number: { type: String }, // replaces 'id'
   id_type: { type: String, enum: ['aadhar', 'pan', 'voter_id'] },
 }, { timestamps: true });
